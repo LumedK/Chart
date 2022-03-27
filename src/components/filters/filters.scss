@@ -1,0 +1,35 @@
+@import '../../app.scss';
+
+.filters {
+    height: 100%;
+    width: 100px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+
+    .filter-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        padding: 10px;
+        color: $dark-grey;
+        .filter-enable {
+            display: none;
+        }
+        .filter-icon {
+            width: 18px;
+            height: 18px;
+            fill: $dark-grey;
+            display: none;
+        }
+        .filter-enable:checked ~ .filter-icon {
+            display: inline;
+        }
+
+        &:hover {
+            background-color: #e2e2e2;
+        }
+    }
+}

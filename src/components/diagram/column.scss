@@ -1,0 +1,20 @@
+@import './diagram.scss';
+
+.column {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+
+    .slice {
+        width: 100%;
+        transition: height 1s ease;
+    }
+}
+.mesh-col {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    border-right: $mesh-border;
+    z-index: -1;
+}
